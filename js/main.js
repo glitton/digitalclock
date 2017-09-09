@@ -31,8 +31,6 @@ $(document).ready(function(){
       currTime = hour + ':' + min + ':' + sec + ' AM';
     }
 
-
-
     // Display date and time in DOM
     document.getElementById('date').textContent = dateToday;
     document.getElementById('time').innerHTML = 'The time is ' + currTime; 
@@ -43,8 +41,7 @@ $(document).ready(function(){
     }, 1000)
   }
 
-//Event lister that start function on page load
-document.getElementById('time').addEventListener('onload', showTime(), false)
-
+  //Event lister that starts function when the page loads
+  document.getElementById('time').addEventListener('onload', showTime(), false)
 
 });

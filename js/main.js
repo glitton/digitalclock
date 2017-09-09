@@ -6,7 +6,6 @@ $(document).ready(function(){
     var today = new Date();
     var date  = today.getDate(); //day of the month
     var day   = today.getDay(); //day of the week
-    console.log(day);
     var month = today.getMonth() //month of the year
     var year  = today.getFullYear(); //year
     var hour  = today.getHours();
@@ -20,14 +19,27 @@ $(document).ready(function(){
     var dayToday = weekDays[day];
     var dateToday = months[month] + ' ' + day + ',' + year;
 
-    //Add zero to seconds if less than 10
+    //Add zero to hours, minutes, seconds if less than 10
+    if(hour < 10){
+      hour = '0'+ hour;
+    }
+    
+    if(min < 10){
+      min = '0'+ min;
+      console.log(min);
+    }
+
     if(sec < 10){
       sec = '0'+ sec;
     }
+
     //If hour is greater than 12 or shows military time, convert to regular time, add AM or PM
     if(hour > 12){
       var hourPM = hour - 12;
       var currTime = hourPM + ':' + min + ':' + sec + ' PM';
+    } else if (hour == 00) {
+      hour = 12;
+      currTime = hour + ':' + min + ':' + sec + ' AM';
     } else {
       currTime = hour + ':' + min + ':' + sec + ' AM';
     }

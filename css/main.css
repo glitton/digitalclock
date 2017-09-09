@@ -17,6 +17,18 @@ h1 {
   text-align: center;
 }
 
+.top {
+  margin-top: 100px;
+}
+
 .day {
-  font-size: 60px;
+  font-size: 100px;
+}
+
+.date {
+  font-size: 80px;
+}
+
+.time {
+  font-size: 120px
 }

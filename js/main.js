@@ -18,7 +18,7 @@ $(document).ready(function(){
     var months = ['January','February','March','April','May','June','July','August','September','October','November','December']
     //Text on the screen
     var dayToday = weekDays[day];
-    var dateToday = months[month] + ' ' + day + ', ' + year;
+    var dateToday = months[month] + ' ' + day + ',' + year;
 
     //Add zero to seconds if less than 10
     if(sec < 10){

@@ -17,7 +17,8 @@ $(document).ready(function(){
     var weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     var months = ['January','February','March','April','May','June','July','August','September','October','November','December']
     //Text on the screen
-    var dateToday = 'Today is ' + weekDays[day] + ' ' + months[month] + ' ' + day + ', ' + year;
+    var dayToday = weekDays[day];
+    var dateToday = months[month] + ' ' + day + ', ' + year;
 
     //Add zero to seconds if less than 10
     if(sec < 10){
@@ -32,8 +33,9 @@ $(document).ready(function(){
     }
 
     // Display date and time in DOM
+    document.getElementById('day').textContent  = dayToday;
     document.getElementById('date').textContent = dateToday;
-    document.getElementById('time').innerHTML = 'The time is ' + currTime; 
+    document.getElementById('time').textContent = currTime; 
 
   //Call the function every second so that clock keeps ticking 
     setTimeout(function() {

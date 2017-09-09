@@ -1,2 +1,22 @@
 /*Digital Clock CSS*/
 
+@font-face {
+  font-family: digitalFont;
+  src: url(digitaldreamfat.ttf);
+
+}
+
+body {
+  font-family: digitalFont;
+  background-color: #5600B2;
+
+}
+
+h1 {
+  color: #F2F154;
+  text-align: center;
+}
+
+.day {
+  font-size: 60px;
+}

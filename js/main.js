@@ -17,29 +17,30 @@ $(document).ready(function(){
     var months = ['January','February','March','April','May','June','July','August','September','October','November','December']
     //Text on the screen
     var dayToday = weekDays[day];
-    var dateToday = months[month] + ' ' + day + ',' + year;
+    var dateToday = months[month] + ' ' + date + ',' + year;
 
-    //Add zero to hours, minutes, seconds if less than 10
-    if(hour < 10){
-      hour = '0'+ hour;
-    }
-    
+    //Add zero when minutes, seconds are less than 10
     if(min < 10){
       min = '0'+ min;
-      console.log(min);
     }
-
+    
     if(sec < 10){
       sec = '0'+ sec;
     }
 
     //If hour is greater than 12 or shows military time, convert to regular time, add AM or PM
     if(hour > 12){
-      var hourPM = hour - 12;
-      var currTime = hourPM + ':' + min + ':' + sec + ' PM';
+      hour = hour - 12;
+      //Add zero to hour if number is less than 10 
+      if(hour < 10){ 
+      hour = '0'+ hour;
+      }
+      var currTime = hour + ':' + min + ':' + sec + ' PM';
+
     } else if (hour == 00) {
       hour = 12;
       currTime = hour + ':' + min + ':' + sec + ' AM';
+
     } else {
       currTime = hour + ':' + min + ':' + sec + ' AM';
     }

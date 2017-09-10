@@ -8,12 +8,13 @@
 
 body {
   font-family: digitalFont;
-  /*background-color: #5600B2;*/
+  /*background-color: #5600B2; purple color*/
+  /*This code provides the changing color animation*/
   background: linear-gradient(-45deg, #5600B2, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
-  -webkit-animation: Gradient 20s ease infinite;
-  -moz-animation: Gradient 20s ease infinite;
-  animation: Gradient 20s ease infinite;
+  -webkit-animation: Gradient 25s ease infinite;
+  -moz-animation: Gradient 25s ease infinite;
+  animation: Gradient 25s ease infinite;
 }
 
   @-webkit-keyframes Gradient {
@@ -63,11 +64,13 @@ h1 {
 }
 
 .day {
-  font-size: 100px;
+  font-size: 110px;
+  letter-spacing: 43px;
 }
 
 .date {
   font-size: 80px;
+  letter-spacing: 2px;
 }
 
 .time {
